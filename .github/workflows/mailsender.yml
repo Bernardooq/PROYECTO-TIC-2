@@ -9,6 +9,10 @@ jobs:
   send_email:
     runs-on: ubuntu-latest
     steps:
+      - name: Mostrar variable de entorno EMAIL_USERNAME
+        run: |
+          echo "EMAIL_USERNAME=${{ secrets.EMAIL_USERNAME }}"
+      
       - name: Configuración de correos
         uses: dawidd6/action-send-mail@v3
         with:
