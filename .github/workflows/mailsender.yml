@@ -14,9 +14,9 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: bernax123321@gmail.com
-          password: lhoayihxsnnopxeu
-          from: bernax123321@gmail.com
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          from: ${{ secrets.EMAIL_USERNAME }}
           to: bernardoorozcoquirarte@gmail.com
           subject: "Cambios subidos a rama ${{ github.ref_name }}"
           body: "Se han realizado cambios en la rama ${{ github.ref_name }} del repositorio."
